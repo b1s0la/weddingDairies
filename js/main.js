@@ -47,43 +47,52 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
- // scroll to top functions
-        // When the user scrolls down 20px from the top of the document, show the button
-        // window.onscroll = function() {scrollFunction()};
+ function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
 
-        // function scrollFunction() {
-        //     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        //         document.getElementById("myBtn").style.display = "block";
-        //     } else {
-        //         document.getElementById("myBtn").style.display = "none";
-        //     }
-        // }
-
-        // // When the user clicks on the button, scroll to the top of the document
-        // function topFunction() {
-        //     document.body.scrollTop = 0; // For Chrome, Safari and Opera 
-        //     document.documentElement.scrollTop = 0; // For IE and Firefox
-        // }
-        // function myClicked(){
-        //     document.getElementById('open').style.display ="block";
-        // }
-        // function myRemove(){
-        //     document.getElementById('open').style.display ="none";
-     
-        // }
-        // function myMessage(){
-        //     $('#edit').modal("hide");
-        //     var change = document.getElementById('replace').textContent;
-        //     var msg = document.getElementById('msgs');
-        //     msg.innerHTML = change.text;
-        //     msg.textContent = change;
-
-
-        // }
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 
 
         
 
+var app = {
+ imageHandler:function() {
+        $("#upload").on('change', function() {
+            //alert("alert");
+            readUrl();
+        });
+        function readUrl (){
+            var file = $("#upload")[0].files[0];
+            //console.log(file);
+            //reader interprets the file selected
+            var reader = new FileReader();
+                //console.log(reader.result);
+            reader.onloadend = function (){
+                //console.log(reader.result);
+                $("#picture_preview").attr("src", reader.result);
+                //$("#picture_preview")[0].src = "" + reader.results;
+                //console.log($("#picture_preview"));
+                //console.log(reader.result);
+            }
+            if(file){
+                reader.readAsDataURL(file);
+            }
+        }
+    }//end of imageHandler
+
+}
 
 
 
