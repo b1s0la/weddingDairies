@@ -74,8 +74,9 @@ h2{
     width: 220px !important;
 }
 #demo{
-    font-size: 69px;
+    font-size: 75px;
 }
+
 
 /*.already{
     color: rgb(91, 192, 222, 0.84) !important;
@@ -112,7 +113,22 @@ p>a:hover{
 /*login page*/
 #log{
     border: 2px solid #601c82;
-    color: #601c82!important; ;
+    color: #601c82!important; 
+   
+}
+#logsearch{
+    border: 2px solid #601c82;
+    color: #601c82!important; 
+     
+}
+#login{
+    border: 2px solid #601c82;
+    color: #601c82!important; 
+    padding: 0.85rem 10rem;
+}
+#login:hover{
+    background: #601c82;
+    color: white !important; 
 }
 #log:hover{
     background: #601c82;
@@ -121,7 +137,10 @@ p>a:hover{
 input.input-alternate:hover, input.input-alternate:focus{
     border: 1px solid #a6c;
 }
-
+span.sign{
+      font-size: 12px;
+      margin-left: 40px;  
+    }
 
 #myBtn {
   display: none;
@@ -245,7 +264,20 @@ input[type=text]:focus:not([readonly]){
 input[type=text]:focus:not([readonly])+label{
     color: #601c82;
 }
-
+input[type=email]:focus:not([readonly]){
+    border-bottom: 1px solid #601c82;
+    box-shadow: 0 1px 0 0 #601c82;
+}
+input[type=email]:focus:not([readonly])+label{
+    color: #601c82;
+}
+ textarea.md-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #601c82;
+    box-shadow: 0 1px 0 0 #601c82;
+ }
+ .md-form .prefix.active {
+    color: #601c82;
+ }
 #picture_preview{
  
   transition: all 1s ease-in;
@@ -272,7 +304,11 @@ input[type=text]:focus:not([readonly])+label{
     height: 160%;
     width: 200%;
 }
-
+/*photo Album*/
+img.image{
+    height: 180px;
+    width: 100%;
+}
 
 
 
@@ -310,6 +346,22 @@ input[type=text]:focus:not([readonly])+label{
     .login{
          width: 206px;
     }
+    button#log.btn.btn-outline-secondary.waves-effect{
+        padding: 0.85rem 8.0rem;
+    }
+     button#log.btn.btn-outline-secondary.waves-effect.log{
+        padding: 0.85rem 2.0rem; 
+    }
+    button#log.btn.btn-outline-secondary.waves-effect.logz{
+        padding: 0.85rem 1.0rem; 
+    }
+    #login{
+        padding: 0.85rem 8rem;
+    }
+    span.sign{
+      font-size: 11px;
+      margin-left: 0px;  
+    }
     .bottons{
         margin-top: 24px;
     }
@@ -319,7 +371,7 @@ input[type=text]:focus:not([readonly])+label{
     .leaf{
         display: none;
     }
-    #demo{
+   #demo{
         font-size: 40px;
     }
     .days{
@@ -342,8 +394,14 @@ input[type=text]:focus:not([readonly])+label{
         padding: 5px 9px;
     }
     .btnall{
-        width: 97px;
+        width: 98px;
     }
+    .btn.btnall{
+    width: 97px;
+    background: #601c82;
+    
+    /*border: 2px solid #601c82;*/
+}
     div.btn-group.location{
         margin-left: -45px;
     }
@@ -367,6 +425,30 @@ input[type=text]:focus:not([readonly])+label{
         margin-top: 1px;
         margin-left: -36px;
     }
+   div.tab>button.tablinks{
+        font-size: 9px;
+    }
+    .tabcontent>h1{
+        font-size: 1.5rem;
+    }
+    h4.card-header{
+        font-size: 1rem;
+    }
+    h3>span{
+        font-size: 1.4rem;
+        margin-top: 15px;
+    }
+    h3>strong{
+        font-size: 1.5rem;
+    }
+    .challenges{
+        font-size: 1rem;
+    }
+    /*Photo Album*/
+   /* img.image{
+    height: 90px;
+    width: 100%;
+}*/
 
    /* button.btn.btn-lg.dropdown-toggle.c-dark.btndrop1{
         padding: 7px;
